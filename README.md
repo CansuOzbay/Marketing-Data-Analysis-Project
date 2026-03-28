@@ -28,4 +28,4 @@ Bu bölümde Google ve Facebook reklam verileri birleştirilerek aşağıdaki an
 -Aynı session_idye sahip farklı kullanıcılar olabilir, bu yüzden user_id + session_id kombinasyonu kullanıldı.
 -Boş değerler COALESCE fonksiyonu ile kontrol edildi.
 ## 📊 Veri Seti Hakkında
-Projede `ads_analysis_goit_course` veritabanındaki `facebook_ads_basic_daily` ve `google_ads_basic_daily` tabloları kullanılmıştır.
+Projede `ads_analysis_goit_course` veritabanındaki `facebook_ads_basic_daily` ve `google_ads_basic_daily` tabloları,bıgquery için Google Analytics 4 (GA4) veri seti kullanılmıştır.
