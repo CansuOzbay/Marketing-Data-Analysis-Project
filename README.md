@@ -19,5 +19,13 @@ Bu bölümde Google ve Facebook reklam verileri birleştirilerek aşağıdaki an
 - **Aggregate Functions:** SUM, AVG, MAX, MIN gibi fonksiyonlarla metrikler özetlendi.
 - **Window Functions:** Veriler arasında sıralama ve değişim analizi yapmak için kullanıldı.
 
+### Görev 2 & 3: GA4 Etkinlik ve Dönüşüm Analizi (BigQuery)
+- *Google Analytics 4 (GA4):* Ham etkinlik verileri (events) kullanılarak kullanıcı bazlı oturum ve dönüşüm tabloları oluşturuldu.
+- *Kullanıcı Tanımlama:* Farklı kullanıcıların aynı session_id'ye sahip olma riskine karşı user_id + session_id kombinasyonu ile benzersiz oturum takibi yapıldı.
+- *Dönüşüm Hunisi:* Sepete ekleme (add_to_cart), ödeme başlangıcı (begin_checkout) ve satın alma (purchase) adımları arasındaki dönüşüm oranları hesaplandı.
+
+## 🛠️ Kullanılan Teknikler
+-Aynı session_idye sahip farklı kullanıcılar olabilir, bu yüzden user_id + session_id kombinasyonu kullanıldı.
+-Boş değerler COALESCE fonksiyonu ile kontrol edildi.
 ## 📊 Veri Seti Hakkında
 Projede `ads_analysis_goit_course` veritabanındaki `facebook_ads_basic_daily` ve `google_ads_basic_daily` tabloları kullanılmıştır.
