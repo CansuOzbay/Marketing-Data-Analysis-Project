@@ -27,5 +27,16 @@ Bu bölümde Google ve Facebook reklam verileri birleştirilerek aşağıdaki an
 ## 🛠️ Kullanılan Teknikler
 -Aynı session_idye sahip farklı kullanıcılar olabilir, bu yüzden user_id + session_id kombinasyonu kullanıldı.
 -Boş değerler COALESCE fonksiyonu ile kontrol edildi.
+
+### Görev 4: Açılış Sayfası Dönüşüm Analizi (Landing Page Conversion)
+- **Sayfa Bazlı Analiz:** 2020 yılı verileriyle, kullanıcıların ilk temas kurduğu açılış sayfalarının (landing pages) performansı ölçüldü.
+- **Dönüşüm Oranı (CR):** Benzersiz oturum sayısı ile satın alma (purchase) etkinlikleri eşleştirilerek sayfa bazlı dönüşüm oranları hesaplandı.
+- **Teknik Detay:** `session_start` ve `purchase` olaylarının farklı URL'lerde gerçekleşme ihtimaline karşı eşleştirme `user_id` + `session_id` üzerinden yapıldı.
+
+### Görev 5: Kullanıcı Etkileşimi ve Satın Alma Korelasyonu (Korelasyon Analizi)
+- **Etkileşim Analizi:** Her oturum için `session_engaged` durumu ve milisaniye bazında toplam etkileşim süresi hesaplandı.
+- **Korelasyon:** Kullanıcıların sitede geçirdiği sürenin ve etkileşim düzeyinin satın alma kararı üzerindeki etkisi analiz edildi.
+- **Veri Temizliği:** Analiz sırasında karşılaşılan boş değerler (null), veritabanı tutarlılığı için `COALESCE` fonksiyonu ile yönetildi.
+- 
 ## 📊 Veri Seti Hakkında
 Projede `ads_analysis_goit_course` veritabanındaki `facebook_ads_basic_daily` ve `google_ads_basic_daily` tabloları,bıgquery için Google Analytics 4 (GA4) veri seti kullanılmıştır.
